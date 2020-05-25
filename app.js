@@ -1,4 +1,4 @@
-	
+
 	if ( navigator.serviceWorker ) {
     	navigator.serviceWorker.register('sw.js');
 	}
@@ -30,6 +30,7 @@
 
 			
 				var snd1 = new Audio("coche_8.mp3");
+				snd1.load();
 	  			snd1.play();	
 		
 			
@@ -54,6 +55,7 @@
 	       					console.log("bandera==0");
 
 	       					var snd = new Audio("coche_8.mp3");
+	       					snd.load();
 	  						snd.play();
 	  						document.getElementById('tituloTiempo').innerHTML="DESCANSO";
 	  						document.body.style.backgroundColor = "White";
@@ -63,6 +65,7 @@
 	       					console.log	("bandera==1");
 	       					document.getElementById('tituloTiempo').innerHTML="ENTRENAR";
 	       					var snd = new Audio("coche_8.mp3");
+	       					snd.load();
 	  						snd.play();
 	  						document.body.style.backgroundColor = "#BDB76B";
 	       				}
