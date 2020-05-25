@@ -1,0 +1,27 @@
+.mifuente{
+	font-size: 30px;
+}
+.fondo{
+  background-color:#A9A9A9;
+}
+@media (max-width: 200px) and (max-heigth: 160px) {
+    .mifuente {
+        font-size: 30px;
+    }
+}
+.fuenteReloj{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 50vw;
+}
+
+.fuenteAnuncio{
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	font-weight: bold;
+  	font-size: 7vw;
+  	color: RED;
+}
