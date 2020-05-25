@@ -18,87 +18,91 @@
 		var txtDescanso=document.getElementById('descanso');
 		var lblSegundos=document.getElementById('lblSegundos');
 
-		divOcultar.style.display='none';
-		
-		divReloj.style.display='block';
-		divReloj2.style.display='block';
-		var totalTiempo=txtTiempo.value;
-		var serie=txtSerie.value;
-		var descanso=txtDescanso.value;
+		if (txtSerie.value.length>0 && txtTiempo.value.length>0 && txtDescanso.value.length>0){
 
-		
-			var snd1 = new Audio("coche_8.mp3");
-  			snd1.play();	
-	
-		
-		
-
-			var timeleft = totalTiempo;
-			var bandera=true;
-			var contador=0;
-			var downloadTimer = setInterval(function(){
-
-				
-     			document.getElementById("lblSegundos").innerHTML =  timeleft--;
-     			//console.log("timeleft",timeleft);
-     			//console.log("serie%",serie);
-     			//console.log("descanso",descanso);
-     			if(timeleft <= 0 && serie>0){
-       				console.log("bandera",bandera);
-       				if (bandera){
-       					timeleft=descanso;
-       					bandera=false;
-       					serie--;
-       					console.log("bandera==0");
-
-       					var snd = new Audio("coche_8.mp3");
-  						snd.play();
-  						document.getElementById('tituloTiempo').innerHTML="DESCANSO";
-  						document.body.style.backgroundColor = "White";
-       				}else{
-       					timeleft=totalTiempo;
-       					bandera=true;
-       					console.log	("bandera==1");
-       					document.getElementById('tituloTiempo').innerHTML="ENTRENAR";
-       					var snd = new Audio("coche_8.mp3");
-  						snd.play();
-  						document.body.style.backgroundColor = "#BDB76B";
-       				}
-       				if(serie==0){
-       					clearInterval(downloadTimer);
-       					divOcultar.style.display='block';
-		
-						divReloj.style.display='none';
-						divReloj2.style.display='none';
-						location.reload();
-       				}
-       				/*contador++;
-       				
-       				if(contador%2==0){
-       					bandera=0;
-       					timeleft=descanso;
-       					serie--;
-       				}else{
-       					
-       					bandera=1;
-       					timeleft=totalTiempo;
-       				}
-
-       				//if (bandera==0){
-       					       				//}
-
-
-       				
-       				console.log("serie",serie);
-       				console.log	("intervalo",timeleft);
-       				console.log	('contador',contador);
-       				*/
-
-     			}
-			},1000);
+			divOcultar.style.display='none';
 			
-	
+			divReloj.style.display='block';
+			divReloj2.style.display='block';
+			var totalTiempo=txtTiempo.value;
+			var serie=txtSerie.value;
+			var descanso=txtDescanso.value;
+
+			
+				var snd1 = new Audio("coche_8.mp3");
+	  			snd1.play();	
 		
+			
+			
+
+				var timeleft = totalTiempo;
+				var bandera=true;
+				var contador=0;
+				var downloadTimer = setInterval(function(){
+
+					
+	     			document.getElementById("lblSegundos").innerHTML =  timeleft--;
+	     			//console.log("timeleft",timeleft);
+	     			//console.log("serie%",serie);
+	     			//console.log("descanso",descanso);
+	     			if(timeleft <= 0 && serie>0){
+	       				console.log("bandera",bandera);
+	       				if (bandera){
+	       					timeleft=descanso;
+	       					bandera=false;
+	       					serie--;
+	       					console.log("bandera==0");
+
+	       					var snd = new Audio("coche_8.mp3");
+	  						snd.play();
+	  						document.getElementById('tituloTiempo').innerHTML="DESCANSO";
+	  						document.body.style.backgroundColor = "White";
+	       				}else{
+	       					timeleft=totalTiempo;
+	       					bandera=true;
+	       					console.log	("bandera==1");
+	       					document.getElementById('tituloTiempo').innerHTML="ENTRENAR";
+	       					var snd = new Audio("coche_8.mp3");
+	  						snd.play();
+	  						document.body.style.backgroundColor = "#BDB76B";
+	       				}
+	       				if(serie==0){
+	       					clearInterval(downloadTimer);
+	       					divOcultar.style.display='block';
+			
+							divReloj.style.display='none';
+							divReloj2.style.display='none';
+							location.reload();
+	       				}
+	       				/*contador++;
+	       				
+	       				if(contador%2==0){
+	       					bandera=0;
+	       					timeleft=descanso;
+	       					serie--;
+	       				}else{
+	       					
+	       					bandera=1;
+	       					timeleft=totalTiempo;
+	       				}
+
+	       				//if (bandera==0){
+	       					       				//}
+
+
+	       				
+	       				console.log("serie",serie);
+	       				console.log	("intervalo",timeleft);
+	       				console.log	('contador',contador);
+	       				*/
+
+	     			}
+				},1000);
+				
+	
+		}else{
+			alert('Debe completar la serie, tiempo y descanso. Revise!!!');
+		}
 		
 
 

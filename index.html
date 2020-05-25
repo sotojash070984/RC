@@ -32,24 +32,24 @@
 		<div class="form-group" id="datos">
 			<h1 class="mifuente">Par&aacute;metros</h1>
 			<label class="mifuente"># Series</label>
-			 <input type="number" id="serie" class="form-control input-lg" >
+			 <input type="number" id="serie" class="form-control input-lg" required >
 
 			 <label class="mifuente">Tiempo (segundos)</label>
-			 <input type="number" id="tiempo" class="form-control input-lg" >
+			 <input type="number" id="tiempo" class="form-control input-lg" required>
 
 			 <label class="mifuente">Descanso (segundos)</label>
-			 <input type="number" id="descanso" class="form-control input-lg" >
+			 <input type="number" id="descanso" class="form-control input-lg" required >
 
 			 <br>
 
 			 <button type="button" id="btnComenzar" class="btn btn-primary" onclick="comenzar();">Comenzar!!!</button>
 			 <button type="button" id="btnLimpiar" class="btn btn-danger" onclick="limpiar()">Limpiar!!!</button>
 		</div>
-		<div class="form-group" id="reloj2" class="fuenteReloj" style="display:none;">
-			<span id="tituloTiempo" class="fuenteAnuncio">ENTRENAR</span>			
-		</div>
+		  <div class="form-group" id="reloj2" class="fuenteAnuncio" style="display:none;">
+						<span id="tituloTiempo" class="fuenteAnuncio">ENTRENAR</span>
+		</div>  
 		<div class="form-group" id="reloj" class="fuenteReloj" style="display:none;">
-
+			
 			<span id="lblSegundos" class="fuenteReloj"></span>
 		</div>
 	</div>
