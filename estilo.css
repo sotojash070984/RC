@@ -25,3 +25,9 @@
   	font-size: 7vw;
   	color: RED;
 }
+body {
+-webkit-user-select: none;
+-webkit-tap-highlight-color: transparent;
+-webkit-touch-callout: none;
+  overscroll-behavior-y:contain;
+}
