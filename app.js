@@ -17,6 +17,7 @@
 		var txtTiempo=document.getElementById('tiempo');
 		var txtDescanso=document.getElementById('descanso');
 		var lblSegundos=document.getElementById('lblSegundos');
+		var aud=document.getElementById('audioReprod');
 
 		if (txtSerie.value.length>0 && txtTiempo.value.length>0 && txtDescanso.value.length>0){
 
@@ -28,10 +29,13 @@
 			var serie=txtSerie.value;
 			var descanso=txtDescanso.value;
 
-			
-				var snd1 = new Audio("coche_8.mp3");
-				snd1.load();
-	  			snd1.play();	
+				
+				aud.style.display='block';
+				aud.play();
+				aud.style.display='none'
+				//var snd1 = new Audio("coche_8.mp3");
+				//snd1.load();
+	  			//snd1.play();	
 		
 			
 			
@@ -54,9 +58,12 @@
 	       					serie--;
 	       					console.log("bandera==0");
 
-	       					var snd = new Audio("coche_8.mp3");
-	       					snd.load();
-	  						snd.play();
+	       					//var snd = new Audio("coche_8.mp3");
+	       					//snd.load();
+	  						//snd.play();
+	  						aud.style.display='block';
+							aud.play();
+							aud.style.display='none'
 	  						document.getElementById('tituloTiempo').innerHTML="DESCANSO";
 	  						document.body.style.backgroundColor = "White";
 	       				}else{
@@ -64,9 +71,12 @@
 	       					bandera=true;
 	       					console.log	("bandera==1");
 	       					document.getElementById('tituloTiempo').innerHTML="ENTRENAR";
-	       					var snd = new Audio("coche_8.mp3");
-	       					snd.load();
-	  						snd.play();
+	       					//var snd = new Audio("coche_8.mp3");
+	       					//snd.load();
+	  						//snd.play();
+	  						aud.style.display='block';
+							aud.play();
+							aud.style.display='none'
 	  						document.body.style.backgroundColor = "#BDB76B";
 	       				}
 	       				if(serie==0){
