@@ -30,6 +30,8 @@ body {
 -webkit-tap-highlight-color: transparent;
 -webkit-touch-callout: none;
   overscroll-behavior-y:contain;
+  background-image: url('img/Foto_Pesas.jpg');
+  background-size: 100%;
 }
 .audio{
   display: none;

@@ -16,6 +16,7 @@ self.addEventListener('install', e => {
                 'trucks036.mp3',
                 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',
                 'img/favicon.ico',
+                'img/Foto_Pesas.jpg',
                 'img/android-icon-192x192.png',
                 'img/apple-icon-57x57.png',
                 'img/apple-icon-60x60.png',
