@@ -33,7 +33,11 @@ self.addEventListener('install', e => {
                 'img/ms-icon-70x70.png',
                 'img/ms-icon-144x144.png',
                 'img/ms-icon-150x150.png',
-                'img/ms-icon-310x310.png'
+                'img/ms-icon-310x310.png',
+                'img/apple-launch-640x1136.png',
+                'img/apple-launch-1125x2436.png',
+                'img/apple-launch-1242x2208.png',
+                'img/apple-launch-750x1334.png'
             ]);
 
         
@@ -51,7 +55,6 @@ self.addEventListener('fetch', e =>{
 
 	  const respuesta = caches.match( e.request )
          .then( res => {
-
              if ( res ) return res;
 
              // No existe el archivo

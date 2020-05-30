@@ -42,7 +42,7 @@
 
 				var timeleft = totalTiempo;
 				var bandera=true;
-				var contador=0;
+				var contador=1;
 				var downloadTimer = setInterval(function(){
 
 					
@@ -67,10 +67,11 @@
 	  						document.getElementById('tituloTiempo').innerHTML="DESCANSO";
 	  						document.body.style.backgroundColor = "White";
 	       				}else{
+	       					contador++;
 	       					timeleft=totalTiempo;
 	       					bandera=true;
 	       					console.log	("bandera==1");
-	       					document.getElementById('tituloTiempo').innerHTML="ENTRENAR";
+	       					document.getElementById('tituloTiempo').innerHTML="ENTRENAR / SERIE N&ordm;:" + contador ;
 	       					//var snd = new Audio("coche_8.mp3");
 	       					//snd.load();
 	  						//snd.play();
