@@ -2,7 +2,9 @@
 	font-size: 30px;
 }
 .fondo{
-  background-color:#A9A9A9;
+  background-color:WHITE;
+  
+  background-size: 100%;
 }
 @media (max-width: 200px) and (max-heigth: 160px) {
     .mifuente {
@@ -13,8 +15,23 @@
 	display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 75vh;
   font-size: 45vw;
+  color: BLACK!important;
+}
+
+.listaEjercicio{
+  color: RED;
+  font-weight: bold;
+}
+
+.fuenteReloj2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+  font-size: 35vw;
+  color: BLACK!important;
 }
 
 .fuenteAnuncio{
@@ -22,7 +39,7 @@
   	align-items: center;
   	justify-content: center;
   	font-weight: bold;
-  	font-size: 6vw;
+  	font-size: 5vw;
   	color: RED;
 }
 body {
@@ -30,11 +47,18 @@ body {
 -webkit-tap-highlight-color: transparent;
 -webkit-touch-callout: none;
   overscroll-behavior-y:contain;
-  background-image: url('img/Foto_Pesas.jpg');
-  background-size: 100%;
+ 
 }
 .audio{
   display: none;
   height: 5px;
   width: 5px;
+}
+
+.invisible{
+  display: none;
+}
+.textoLargo{
+  height:   70%;
+
 }

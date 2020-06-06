@@ -58,7 +58,91 @@ content="black-translucent">
 
 </head>
 <body class="fondo" onload="cargarPagina();">
-	<div class="container">
+	
+	<div class="container" id="mnPrincipal">
+		 <button type="button" class="btn btn-primary btn-lg btn-block" onclick="menuTabata()">Tabata</button>
+		 <button type="button" class="btn btn-primary btn-lg btn-block" onclick="menuLibre()">Libre</button>
+	</div>
+
+	<div class="container invisible" id="mnLibre" >
+		<div class="form-group" id="datos1">
+			<h1 class="mifuente">Par&aacute;metros</h1>
+			<label class="mifuente"># Ejercicio</label>
+			<div class="input-group">
+				 <select class="custom-select" id="cboEjercicio">
+				  <option>Sentadillas</option>
+				  <option>Sentadillas zumo</option>
+				  <option>Desplante</option>
+				  <option>Peso muerto</option>
+				  <option>Pared</option>
+				  <option>Barra</option>
+				  <option>Apertura/mancuerna</option>
+				  <option>Lagartija</option>
+				  <option>Pull up</option>
+				  <option>Bicep</option>
+				  <option>Tricep</option>
+				  <option>Plancha</option>
+				  <option>Remo/mancuerna</option>
+				  <option>Frontales</option>
+				  <option>Laterales</option>
+				  <option>Barra/crossfit</option>
+				  <option>Mancuerna/crossfit</option>
+				  <option>Trampolin</option>
+				  <option>Suiza</option>
+				  <option>Abdominales/laterales</option>
+				  <option>Abdominales/pullover</option>
+				  <option>Deadlift</option>
+				  <option>Back squat</option>
+				  <option>Power snatch</option>
+				  <option>Goblet squat</option>
+				  <option>Devil press</option>
+				  <option>Bulgarian squat</option>
+				  <option>Patada de mula</option>
+				  <option>Press frances</option>
+				  <option>Concentrado</option>
+				  <option>Elevacion vertical</option>
+				  <option>Elevacion pelvica</option>
+				  <option>Jumping jack</option>
+				  <option>Burpees</option>
+				  <option>Min floor wipers</option>
+				  <option>V up</option>
+				  <option>Hallow Rock</option>
+				</select>
+				<div class="input-group-append">
+					<button type="button" id="btnIr" onclick="agregar()" class="btn btn-success">+</button>
+				</div>
+			</div>
+			<br>	
+			 <!--<input type="text"  class="form-control input-lg" id="listaEjercicio" >-->
+			 <span id="listaEjercicio" class="listaEjercicio"></span>
+				<br>	
+			
+			 <label class="mifuente"># Repeticiones</label>
+			 <input type="number" id="repeticionesEJ" class="form-control input-lg" >
+
+			 <label class="mifuente">Tiempo (segundos)</label>
+			 <input type="number" id="tiempoEj" class="form-control input-lg" >
+
+			 <label class="mifuente">Descanso (segundos)</label>
+			 <input type="number" id="descansoEj" class="form-control input-lg"  >
+
+			 <br>
+
+			 <button type="button" id="btnComenzarEj" class="btn btn-primary" onclick="comenzarLibre();">Comenzar!!!</button>
+			 <button type="button" id="btnLimpiarEJ" class="btn btn-danger" onclick="limpiarLibre()">Limpiar!!!</button>
+			 <button type="button" id="btnMenu" class="btn btn-warning" onclick="irMenu()">ir a Men&#250;</button>
+		</div>
+
+		<div class="form-group" id="reloj2EJ" class="fuenteAnuncio invisible" >
+			<span id="tituloTiempoEJ" class="fuenteAnuncio invisible">ENTRENAR / Ejer: </span>
+		</div>  
+		<div class="form-group" id="relojEJ" class="fuenteReloj2 invisible">	
+			<span id="lblSegundosEj" class="fuenteReloj2 invisible"></span>
+			<audio src="coche_8.mp3" class="audio" id="audioReprod"></audio>
+		</div>
+	</div>
+	
+	<div class="container invisible"  id="mnTabata">
 		
 		<div class="form-group" id="datos">
 			<h1 class="mifuente">Par&aacute;metros</h1>
@@ -75,12 +159,12 @@ content="black-translucent">
 
 			 <button type="button" id="btnComenzar" class="btn btn-primary" onclick="comenzar();">Comenzar!!!</button>
 			 <button type="button" id="btnLimpiar" class="btn btn-danger" onclick="limpiar()">Limpiar!!!</button>
+			 <button type="button" id="btnMenu" class="btn btn-warning" onclick="irMenu()">ir a Men&#250;</button>
 		</div>
-		  <div class="form-group" id="reloj2" class="fuenteAnuncio" style="display:none;">
-						<span id="tituloTiempo" class="fuenteAnuncio">ENTRENAR / SERIE N&ordm;: 1</span>
+		<div class="form-group" id="reloj2" class="fuenteAnuncio invisible" >
+						<span id="tituloTiempo" class="fuenteAnuncio invisible">ENTRENAR / SERIE N&ordm;: 1</span>
 		</div>  
-		<div class="form-group" id="reloj" class="fuenteReloj" style="display:none;">
-			
+		<div class="form-group" id="reloj" class="fuenteReloj invisible">	
 			<span id="lblSegundos" class="fuenteReloj"></span>
 			<audio src="coche_8.mp3" class="audio" id="audioReprod"></audio>
 		</div>
